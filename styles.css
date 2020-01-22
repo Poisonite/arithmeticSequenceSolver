@@ -1,0 +1,117 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: white;
+    background: linear-gradient(rgb(136, 13, 130), rgb(179, 36, 143));
+    font-size: 20px;
+    color: rgb(233, 233, 233);
+}
+
+.titleHeader{
+    text-align: center;
+    background-color: rgba(34, 34, 34, 0.904);
+    color: white;
+    border: rgb(129, 61, 168) solid 4px;
+    border-radius: 40px;
+    padding: 5px 0px;
+    margin: 10px 0px;
+}
+.titleHeader h2{
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+.titleHeader h3{
+    font-size: 30px;
+    font-style: italic;
+    margin-top: 5px;
+    color: rgb(182, 182, 182);
+}
+
+.container{
+    width: 520px;
+    height: auto;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(8, 110, 150);
+    padding-top: 20px;
+    border: rgb(78, 212, 230) solid 2px;
+}
+
+#instructions{
+    border: solid 2px rgb(78, 212, 230);
+    height: 25px;
+    padding: 5px;
+    text-align: right;
+    float: none;
+    margin: 0 auto;
+    background-color: rgb(26, 240, 186);
+    border-radius: 7px;
+    color: black;
+}
+
+#answerOutput{
+    border: solid 2px rgb(78, 212, 230);
+    height: 45px;
+    padding: 5px;
+    text-align: right;
+    font-size: 30px;
+    float: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgb(26, 240, 186);
+    border-radius: 7px;
+    color: black;
+}
+#opOutput{
+    border: solid 2px rgb(78, 212, 230);
+    height: 25px;
+    width: 30px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: auto;
+    text-align: center;
+    background-color: rgb(26, 240, 186);
+    border-radius: 7px;
+    color: black;
+}
+.inputBoxes{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 32px;
+    background-color: rgb(26, 204, 159);
+    color: white;
+    font-size: 30px;
+}
+#operators{
+    margin-left: auto;
+    margin-right: auto;
+    width: 255px;
+}
+button:hover{
+    background-color: rgb(26, 240, 186);
+    color: rgb(179, 179, 179);
+    transition: background-color 2s;
+    transition: color 2s;
+}
+
+#submitB{
+    width: 100px;
+    height: 50px;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+button.submitButton{
+    width: auto;
+}

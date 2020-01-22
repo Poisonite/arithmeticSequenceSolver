@@ -9,16 +9,41 @@
         <title>Arithmetic Sequence Solver</title>
     </head>
     <body>
-        <div class="col-1-1">
-            <div class="row">
-                <h2>Arithmetic Sequence Solver</h2>
-                <h3>Using front-end JavaScript</h3>
+        <div class="titleHeader">
+            <h2>Arithmetic Sequence Solver</h2>
+            <h3>Using front-end JavaScript</h3>
+        </div>
+        <div class="container">
+            <div class="row" id="instructions"></div>
+            <div class="row" id="answerOutput"></div>
+            <div class="row" id="opOutput"></div>
+
+            <div class="row" id="dataEntry">
+                <div class="inputBoxes">
+                    Starting Number:<br/>
+                    <input type="number" name="startingNum" id="startingNum" />
+                </div>
+                <div class="inputBoxes">
+                    Interval Number:<br/>
+                    <input type="number" name="intervalNum" id="intervalNum" />
+                </div>
+                <div class="inputBoxes">
+                    Number of Intervals:<br/>
+                    <input type="number" name="intervalCount" id="intervalCount" />
+                </div>
+                <div id="operators">
+                    <button class="opButton" onclick="opEval(1)">+</button> <!-- !!!: Add -->
+                    <button class="opButton" onclick="opEval(2)">-</button> <!-- !!!: Subtract -->
+                    <button class="opButton" onclick="opEval(3)">x</button> <!-- !!!: Multiply -->
+                    <button class="opButton" onclick="opEval(4)">&#247;</button> <!-- !!!: Divide -->
+                </div>
+            </div>
+            <div class="row" id="submitB">
+                <div>
+                    <button class="submitButton" onclick="dataCollect()">Solve</button>
+                </div>
             </div>
         </div>
-        <div class="col-1-1">
-            <div class="row">
-                
-            </div>
         </div>
     </body>
 </html>

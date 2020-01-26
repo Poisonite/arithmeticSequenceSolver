@@ -12,11 +12,11 @@ var operator;
 console.log("Arithmetic Sequence calculator for user given data"); // Adds context to the console
 
 initInstructions();
-function initInstructions(){
+function initInstructions() {
     instructions.innerHTML = "Enter the requested numbers, then click the operator to use";
 }
 
-function dataCollect(){
+function dataCollect() {
     startingNum = parseFloat(document.getElementById("startingNum").value);
     intervalNum = parseFloat(document.getElementById("intervalNum").value);
     intervalCount = parseFloat((document.getElementById("intervalCount").value) - 1);
@@ -26,73 +26,57 @@ function dataCollect(){
     solveLoop();
 }
 
-function opEval(number){
+function opEval(number) {
     operator = number;
     //if/elseIf statements to determine which operator should be used
-    if(operator === 4){
+    if (operator === 4) {
         opOutput.innerHTML = " / ";
         // opString = "/";
         // solveLoop();
     }
-    else if(operator === 3){
+    else if (operator === 3) {
         opOutput.innerHTML = " X ";
         // opString = "*";
         // solveLoop();
     }
-    else if(operator === 2){
+    else if (operator === 2) {
         opOutput.innerHTML = " - ";
         // opString = "-";
         // solveLoop();
     }
-    else if(operator === 1){
+    else if (operator === 1) {
         opOutput.innerHTML = " + ";
         // opString = "+";
         // solveLoop();
     }
 }
 
-function solveLoop(){
+function solveLoop() {
     //Only increases the answer if the math has been run less than/equal to 13 times
-    if(counter <= intervalCount){
-        if(operator === 1){
+    if (counter <= intervalCount) {
+        if (operator === 1) {
             var solve = startingNum + intervalNum;
-            counter = counter + 1;
-            startingNum = solve;
-            console.log("counter" + counter);
-            console.log("num" + startingNum);
-            console.log("solve" + solve);
-            solveLoop();
         }
-        else if(operator === 2){
+        else if (operator === 2) {
             var solve = startingNum - intervalNum;
-            counter = counter + 1;
-            startingNum = solve;
-            console.log("counter" + counter);
-            console.log("num" + startingNum);
-            console.log("solve" + solve);
-            solveLoop();
         }
-        else if(operator === 3){
+        else if (operator === 3) {
             var solve = startingNum * intervalNum;
-            counter = counter + 1;
-            startingNum = solve;
-            console.log("counter" + counter);
-            console.log("num" + startingNum);
-            console.log("solve" + solve);
-            solveLoop();
         }
-        else if(operator === 4){
+        else if (operator === 4) {
             var solve = startingNum / intervalNum;
-            counter = counter + 1;
-            startingNum = solve;
-            console.log("counter" + counter);
-            console.log("num" + startingNum);
-            console.log("solve" + solve);
-            solveLoop();
         }
+
+        counter = counter + 1;
+        startingNum = solve;
+        console.log("counter" + counter);
+        console.log("num" + startingNum);
+        console.log("solve" + solve);
+        solveLoop();
+
     }
     //If the counter is at the number allowed in intervalCount or above it takes the last recorded startingNum value and puts it to a new var
-    else if(counter > intervalCount){
+    else if (counter > intervalCount) {
         var finalAns = startingNum; //New var to hold the last recorded data of the temp var
         document.getElementById("answerOutput").innerHTML = finalAns;
         counter = 1;
